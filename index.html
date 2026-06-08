@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Qwaiting Display</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="viewport">
+  <div id="app" class="app" tabindex="-1">
+
+    <!-- Loading -->
+    <section id="screen-loading" class="screen screen-loading" aria-hidden="false">
+      <div class="loading-card">
+        <div class="qw-logo-mark" aria-hidden="true">Q</div>
+        <h1 class="loading-title">Qwaiting</h1>
+        <p class="loading-sub">For Display</p>
+        <div class="loading-spinner" aria-hidden="true"></div>
+        <p class="loading-text" id="loading-message">Connecting to queue service...</p>
+      </div>
+    </section>
+
+    <!-- Error -->
+    <section id="screen-error" class="screen screen-error hidden" aria-hidden="true">
+      <div class="error-card">
+        <div class="error-icon" aria-hidden="true">!</div>
+        <h2>Connection Lost</h2>
+        <p id="error-message">Unable to reach queue server. Retrying...</p>
+        <button type="button" class="btn-retry" id="btn-retry">Retry Now</button>
+        <p class="error-hint">Press OK to retry · BACK twice to exit</p>
+      </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="screen-dashboard" class="screen screen-dashboard hidden" aria-hidden="true">
+      <header class="top-bar">
+        <div class="brand">
+          <div class="brand-logo" aria-hidden="true">Q</div>
+          <div class="brand-text">
+            <span class="brand-name">Qwaiting</span>
+            <span class="brand-tag">For Display</span>
+          </div>
+        </div>
+        <div class="location-block">
+          <span class="location-label">Location</span>
+          <span class="location-name" id="branch-name">Demo Branch — Reception</span>
+        </div>
+        <div class="top-meta">
+          <span class="status-pill online" id="connection-status">Live</span>
+          <span class="clock" id="datetime">--</span>
+        </div>
+      </header>
+
+      <div class="counter-tabs" id="counter-tabs" role="tablist" aria-label="Service counters"></div>
+
+      <main class="dashboard-main">
+        <section class="serving-panel">
+          <p class="panel-label">Now Serving</p>
+          <div class="token-hero" id="current-token">—</div>
+          <div class="counter-badge">
+            <span class="counter-label">Counter</span>
+            <span class="counter-number" id="counter-number">—</span>
+          </div>
+          <p class="service-name" id="service-name">General Service</p>
+          <div class="announce-bar" id="announce-bar" aria-live="polite">
+            Please proceed to the counter when your token is called
+          </div>
+        </section>
+
+        <aside class="queue-panel">
+          <div class="next-block">
+            <p class="panel-label">Next Token</p>
+            <div class="token-next" id="next-token">—</div>
+          </div>
+
+          <div class="waiting-block">
+            <div class="waiting-header">
+              <span class="panel-label">Waiting Queue</span>
+              <span class="waiting-count" id="waiting-count">0 waiting</span>
+            </div>
+            <ul class="waiting-list" id="waiting-list" aria-label="Waiting tokens"></ul>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat-value" id="avg-wait">—</span>
+              <span class="stat-label">Avg. Wait</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value" id="served-today">—</span>
+              <span class="stat-label">Served Today</span>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="ticker-bar">
+        <span class="ticker-label">Announcement</span>
+        <p class="ticker-text" id="ticker-text">Welcome to Qwaiting — Your digital queue display demo for LG webOS TV</p>
+        <span class="footer-version" id="app-version">v1.1.0</span>
+      </footer>
+
+      <div class="remote-debug hidden" id="remote-debug">
+        Key: <span id="pressed-key">—</span>
+      </div>
+    </section>
+  </div>
+  </div>
+
+  <script src="webOSTVjs-1.2.12/webOSTV.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

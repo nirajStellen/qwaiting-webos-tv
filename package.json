@@ -1,0 +1,14 @@
+{
+  "name": "hello-world-webos",
+  "private": true,
+  "scripts": {
+    "package": "ares-package . -o release",
+    "release": "node scripts/patch-cli.js && rm -rf release && mkdir -p release && ares-package . -o release && ls -lh release/*.ipk",
+    "postinstall": "node scripts/patch-cli.js",
+    "simulator": "bash scripts/run-simulator.sh",
+    "version": "npx ares --version"
+  },
+  "devDependencies": {
+    "@webos-tools/cli": "^3.2.4"
+  }
+}

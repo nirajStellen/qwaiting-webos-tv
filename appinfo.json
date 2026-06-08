@@ -1,0 +1,25 @@
+{
+  "id": "com.demo.helloworld",
+  "version": "1.1.1",
+  "vendor": "Stellen Infotech",
+  "type": "web",
+  "main": "index.html",
+  "title": "Qwaiting Display",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "appDescription": "Qwaiting queue display demo for LG webOS TV — live tokens, counters, and announcements.",
+  "resolution": "1920x1080",
+  "uiRevision": 2,
+  "transparent": false,
+  "handlesRelaunch": false,
+  "requiredMemory": 30,
+  "disableBackHistoryAPI": true,
+  "exclude": [
+    "node_modules",
+    "package.json",
+    "package-lock.json",
+    "release",
+    "scripts",
+    "*.ipk"
+  ]
+}
