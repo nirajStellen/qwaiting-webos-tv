@@ -13,7 +13,16 @@ Demo **Qwaiting For Display** queue dashboard for **LG Smart TVs** (webOS). HTML
 |-------------|-----|
 | **GitHub Pages (browser test)** | https://nirajStellen.github.io/qwaiting-webos-tv/ |
 | **GitHub repo** | https://github.com/nirajStellen/qwaiting-webos-tv |
+| **Actions (download .ipk)** | https://github.com/nirajStellen/qwaiting-webos-tv/actions |
 | **Local preview** | `npm start` → http://localhost:8765 |
+
+### Enable GitHub Pages (one-time)
+
+1. Open https://github.com/nirajStellen/qwaiting-webos-tv/settings/pages  
+2. Under **Build and deployment** → **Source**, choose **GitHub Actions**  
+3. Re-run workflow: **Actions** → **Deploy test preview** → **Run workflow**
+
+After ~1 minute the live test URL will work: **https://nirajStellen.github.io/qwaiting-webos-tv/**
 
 > GitHub Pages is for **browser/UI testing** only. Install the `.ipk` on an LG TV for full remote + webOS APIs.
 
