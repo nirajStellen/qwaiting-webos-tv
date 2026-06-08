@@ -1,9 +1,21 @@
-# Hello World — LG webOS TV Application
+# Qwaiting Display — LG webOS TV Application
 
-A production-ready **Hello World** application for **LG Smart TVs** running webOS. Built with HTML5, CSS3, and vanilla JavaScript using the official **webOSTV.js** library and **webOS CLI** tooling.
+Demo **Qwaiting For Display** queue dashboard for **LG Smart TVs** (webOS). HTML5, CSS3, vanilla JavaScript, and **webOSTV.js**.
 
 **App ID:** `com.demo.helloworld`  
-**Version:** `1.0.0`
+**Version:** `1.1.1`
+
+---
+
+## Test URLs
+
+| Environment | URL |
+|-------------|-----|
+| **GitHub Pages (browser test)** | https://nirajStellen.github.io/qwaiting-webos-tv/ |
+| **GitHub repo** | https://github.com/nirajStellen/qwaiting-webos-tv |
+| **Local preview** | `npm start` → http://localhost:8765 |
+
+> GitHub Pages is for **browser/UI testing** only. Install the `.ipk` on an LG TV for full remote + webOS APIs.
 
 ---
 

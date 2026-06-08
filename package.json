@@ -2,6 +2,8 @@
   "name": "hello-world-webos",
   "private": true,
   "scripts": {
+    "start": "python3 -m http.server 8765",
+    "preview": "python3 -m http.server 8765",
     "package": "ares-package . -o release",
     "release": "node scripts/patch-cli.js && rm -rf release && mkdir -p release && ares-package . -o release && ls -lh release/*.ipk",
     "postinstall": "node scripts/patch-cli.js",
